@@ -19,7 +19,7 @@ You may find this useful if you have logged in on a different device, or you hav
 You can install the package via Composer:
 
 ```bash
-composer require cjmellor/browser-sessions
+composer require harrisonratcliffe/browser-sessions
 ```
 
 ##Publishing the Configuration
@@ -27,7 +27,7 @@ composer require cjmellor/browser-sessions
 To publish the configuration file for this package, run the following Artisan command:
 
 ```bash
-php artisan vendor:publish --provider="Cjmellor\BrowserSessions\BrowserSessionsServiceProvider"
+php artisan vendor:publish --provider="Harrisonratcliffe\BrowserSessionsEnhanced\BrowserSessionsServiceProvider"
 ```
 This will copy the browser-sessions.php configuration file to your application's config directory, allowing you to customize its settings.
 
