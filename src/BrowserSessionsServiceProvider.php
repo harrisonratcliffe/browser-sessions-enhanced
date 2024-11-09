@@ -1,16 +1,16 @@
 <?php
 
-namespace Cjmellor\BrowserSessions;
+namespace Harrisonratcliffe\BrowserSessionsEnhanced;
 
 use Illuminate\Support\ServiceProvider;
 
-class BrowserSessionsServiceProvider extends ServiceProvider
+class BrowserSessionsEnhancederviceProvider extends ServiceProvider
 {
     public function boot()
     {
         // Publishing the configuration file
         $this->publishes([
-            __DIR__.'/../config/browser-sessions.php' => config_path('browser-sessions.php'),
+            __DIR__.'/../config/browser-sessions-enhanced.php' => config_path('browser-sessions-enhanced.php'),
         ]);
     }
 

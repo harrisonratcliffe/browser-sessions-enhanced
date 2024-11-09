@@ -1,6 +1,6 @@
 <?php
 
-namespace Cjmellor\BrowserSessions;
+namespace Harrisonratcliffe\BrowserSessionsEnhanced;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;

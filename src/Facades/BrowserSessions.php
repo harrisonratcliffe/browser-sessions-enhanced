@@ -1,6 +1,6 @@
 <?php
 
-namespace Cjmellor\BrowserSessions\Facades;
+namespace Harrisonratcliffe\BrowserSessionsEnhanced\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
