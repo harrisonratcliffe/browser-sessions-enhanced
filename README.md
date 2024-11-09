@@ -6,6 +6,8 @@
 
 **Forked from [cjmellor/browser-sessions](https://github.com/cjmellor/browser-sessions)**
 
+*I modified this package so I can return the session ID for revoking specific/single sessions. Thought I'd publish it in case anyone else wanted to do the same.
+
 This package allows you to log out sessions that are active on other devices.
 
 You may find this useful if you have logged in on a different device, or you have let someone else use your account, or you have forgotten to log out of a public computer. It can especially be useful if you see suspicious device activity on your account.
@@ -19,7 +21,7 @@ You may find this useful if you have logged in on a different device, or you hav
 You can install the package via Composer:
 
 ```bash
-composer require harrisonratcliffe/browser-sessions
+composer require harrisonratcliffe/browser-sessions-enhanced
 ```
 
 ##Publishing the Configuration
