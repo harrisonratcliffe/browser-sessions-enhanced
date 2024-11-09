@@ -24,7 +24,7 @@ You can install the package via Composer:
 composer require harrisonratcliffe/browser-sessions-enhanced
 ```
 
-## Publishing the Configuration
+##Publishing the Configuration
 
 To publish the configuration file for this package, run the following Artisan command:
 
@@ -36,15 +36,12 @@ This will copy the browser-sessions-enhanced.php configuration file to your appl
 ### Configurable Options
 You can customize the following options in the published config/browser-sessions-enhanced.php file:
 
-`include_ip_address: (default: false)`
+`include_session_id: (default: false)`
 
 Set to true to include the session ID in the response when retrieving the current user's sessions.
-
-`require_password_for_logout: (default: true)`
+`include_ip_address: (default: false)`
 
 Set to true to include the IP address of the session in the response when retrieving the current user's sessions. This can be useful for security purposes.
-
-Set to false to allow users to log out of other sessions without providing their password. If true, users will need to enter their password to log out from other devices, enhancing security.
 
 ## Usage
 
@@ -89,7 +86,7 @@ BrowserSessionsEnhanced::logoutOtherBrowserSessions();
 
 > [!NOTE]
 > 
-> A `password` must be sent along to the method to confirm the user's identity only if the `require_password_for_logout` configuration option is set to true. If this option is set to false, the method will log out all other sessions without requiring a password. Ensure that you check your configuration settings to understand the behavior of this method.
+> A `password` must be sent along to the method to confirm the user's identity. Only then will the sessions be removed. See below on how you would implement this.
 
 ### Views
 
