@@ -31,10 +31,10 @@ To publish the configuration file for this package, run the following Artisan co
 ```bash
 php artisan vendor:publish --provider="Harrisonratcliffe\BrowserSessionsEnhanced\BrowserSessionsEnhancedServiceProvider"
 ```
-This will copy the browser-sessions.php configuration file to your application's config directory, allowing you to customize its settings.
+This will copy the browser-sessions-enhanced.php configuration file to your application's config directory, allowing you to customize its settings.
 
 ### Configurable Options
-You can customize the following options in the published config/browser-sessions.php file:
+You can customize the following options in the published config/browser-sessions-enhanced.php file:
 
 `include_session_id: (default: false)`
 
@@ -47,10 +47,10 @@ Set to true to include the IP address of the session in the response when retrie
 
 ### Retrieving A User's Current Sessions
 
-Use the `BrowserSessions` facade to retrieve all the current user's sessions:
+Use the `BrowserSessionsEnhanced` facade to retrieve all the current user's sessions:
 
 ```php
-BrowserSessions::sessions();
+BrowserSessionsEnhanced::sessions();
 ```
 
 This will return an object with some information about each session:
@@ -74,10 +74,10 @@ This will return an object with some information about each session:
 
 ### Logging Out Other Browser Sessions
 
-Use the `BrowserSessions` facade to log out all the user's other browser sessions:
+Use the `BrowserSessionsEnhanced` facade to log out all the user's other browser sessions:
 
 ```php
-BrowserSessions::logoutOtherBrowserSessions();
+BrowserSessionsEnhanced::logoutOtherBrowserSessions();
 ```
 
 > [!NOTE]
@@ -92,7 +92,7 @@ In your `routes/web.php` file add the following route:
 
 ```php
 Route::delete('logout-browser-sessions', function () {
-    BrowserSessions::logoutOtherBrowserSessions();
+    BrowserSessionsEnhanced::logoutOtherBrowserSessions();
 
     return back()->with('status', 'Logged out of other browser sessions.');
 })->name('logout-browser-sessions');
@@ -116,13 +116,13 @@ Then in your view, you can add a form to submit a `DELETE` request to the above 
 Get the users' last activity by using the `getUserLastActivity` method:
 
 ```php
-BrowserSessions::getUserLastActivity();
+BrowserSessionsEnhanced::getUserLastActivity();
 ```
 
 You can also view the date in a human-readable format:
 
 ```php
-BrowserSessions::getUserLastActivity(human: true);
+BrowserSessionsEnhanced::getUserLastActivity(human: true);
 ```
 
 ## Credits
