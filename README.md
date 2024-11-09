@@ -58,6 +58,7 @@ This will return an object with some information about each session:
 ```php
 [
   {
+    "session_id": "i0HaKKMTcGZBMe1COf06O7HKnkeFmLwUsg6nh43c",
     "device": {
       "browser": "Safari",
       "desktop": true,
