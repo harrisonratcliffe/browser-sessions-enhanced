@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Jenssegers\Agent\Agent;
 
-class BrowserSessions
+class BrowserSessionsEnhanced
 {
     public function sessions(): Collection
 {
