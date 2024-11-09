@@ -58,7 +58,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "harrisonratcliffe\\BrowserSessionsEnhanced\\BrowserSessionsServiceProvider"
+                "harrisonratcliffe\\BrowserSessionsEnhanced\\BrowserSessionsEnhancedServiceProvider"
             ],
             "aliases": {
                 "BrowserSessions": "harrisonratcliffe\\BrowserSessionsEnhanced\\Facades\\BrowserSessionsEnhanced"
