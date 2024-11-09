@@ -4,7 +4,7 @@ namespace Harrisonratcliffe\BrowserSessionsEnhanced\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class BrowserSessions extends Facade
+class BrowserSessionsEnhanced extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
