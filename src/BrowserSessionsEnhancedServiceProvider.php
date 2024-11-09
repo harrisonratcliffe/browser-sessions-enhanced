@@ -17,8 +17,8 @@ class BrowserSessionsEnhancedServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(
-            abstract: 'browser-session-enhanced',
-            concrete: fn () => new BrowserSessionsEnhanced()
+            'browser-sessions-enhanced',
+            fn () => new BrowserSessionsEnhanced()
         );
     }
 }
