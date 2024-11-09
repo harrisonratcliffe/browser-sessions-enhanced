@@ -13,40 +13,39 @@ use Jenssegers\Agent\Agent;
 class BrowserSessionsEnhanced
 {
     public function sessions(): Collection
-{
-    if (config(key: 'session.driver') !== 'database') {
-        return collect();
-    }
-
-    return collect(
-        value: DB::connection(config(key: 'session.connection'))->table(table: config(key: 'session.table', default: 'sessions'))
-            ->where(column: 'user_id', operator: Auth::user()->getAuthIdentifier())
-            ->latest(column: 'last_activity')
-            ->get()
-    )->map(callback: function ($session): object {
-        $agent = $this->createAgent($session);
-
-        $sessionInfo = [
-            'device' => [
-                'browser' => $agent->browser(),
-                'desktop' => $agent->isDesktop(),
-                'mobile' => $agent->isMobile(),
-                'tablet' => $agent->isTablet(),
-                'platform' => $agent->platform(),
-            ],
-            'ip_address' => $session->ip_address,
-            'is_current_device' => $session->id === request()->session()->getId(),
-            'last_active' => Carbon::createFromTimestamp($session->last_activity)->diffForHumans(),
-        ];
-
-        // Include session ID if configured
-        if (config('browser-sessions-enhanced.include_session_id')) {
-            $sessionInfo['session_id'] = $session->id;
+    {
+        if (config(key: 'session.driver') !== 'database') {
+            return collect();
         }
 
-        return (object) $sessionInfo;
-    });
-}
+        return collect(
+            value: DB::connection(config(key: 'session.connection'))->table(table: config(key: 'session.table', default: 'sessions'))
+                ->where(column: 'user_id', operator: Auth::user()->getAuthIdentifier())
+                ->latest(column: 'last_activity')
+                ->get()
+        )->map(callback: function ($session): object {
+            $agent = $this->createAgent($session);
+
+            $sessionInfo = [
+                'device' => [
+                    'browser' => $agent->browser(),
+                    'desktop' => $agent->isDesktop(),
+                    'mobile' => $agent->isMobile(),
+                    'tablet' => $agent->isTablet(),
+                    'platform' => $agent->platform(),
+                ],
+                'ip_address' => $session->ip_address,
+                'is_current_device' => $session->id === request()->session()->getId(),
+                'last_active' => Carbon::createFromTimestamp($session->last_activity)->diffForHumans(),
+            ];
+
+            if (config('browser-sessions-enhanced.include_session_id')) {
+                $sessionInfo = array_merge(['session_id' => $session->id], $sessionInfo);
+            }
+
+            return (object) $sessionInfo;
+        });
+    }
 
 
     protected function createAgent(mixed $session)
