@@ -2,7 +2,7 @@
 >
 > This package can only be used with the `database` driver for the Sessions. This is how it is done in Jetstream, so keep this in mind as it may turn you off knowing you need to manage sessions in the database.
 
-# Logout Other Browser Sessions
+# Browser Sessions Enhanced
 
 **Forked from [cjmellor/browser-sessions](https://github.com/cjmellor/browser-sessions)**
 
