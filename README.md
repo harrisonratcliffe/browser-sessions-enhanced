@@ -50,6 +50,8 @@ Set to true to include the IP address of the session in the response when retrie
 Use the `BrowserSessionsEnhanced` facade to retrieve all the current user's sessions:
 
 ```php
+use Harrisonratcliffe\BrowserSessionsEnhanced\Facades\BrowserSessionsEnhanced;
+
 BrowserSessionsEnhanced::sessions();
 ```
 
@@ -77,6 +79,8 @@ This will return an object with some information about each session:
 Use the `BrowserSessionsEnhanced` facade to log out all the user's other browser sessions:
 
 ```php
+use Harrisonratcliffe\BrowserSessionsEnhanced\Facades\BrowserSessionsEnhanced;
+
 BrowserSessionsEnhanced::logoutOtherBrowserSessions();
 ```
 
@@ -91,6 +95,8 @@ The package does not come with any pre-defined views to use. Here is an example 
 In your `routes/web.php` file add the following route:
 
 ```php
+use Harrisonratcliffe\BrowserSessionsEnhanced\Facades\BrowserSessionsEnhanced;
+
 Route::delete('logout-browser-sessions', function () {
     BrowserSessionsEnhanced::logoutOtherBrowserSessions();
 
@@ -116,12 +122,16 @@ Then in your view, you can add a form to submit a `DELETE` request to the above 
 Get the users' last activity by using the `getUserLastActivity` method:
 
 ```php
+use Harrisonratcliffe\BrowserSessionsEnhanced\Facades\BrowserSessionsEnhanced;
+
 BrowserSessionsEnhanced::getUserLastActivity();
 ```
 
 You can also view the date in a human-readable format:
 
 ```php
+use Harrisonratcliffe\BrowserSessionsEnhanced\Facades\BrowserSessionsEnhanced;
+
 BrowserSessionsEnhanced::getUserLastActivity(human: true);
 ```
 
