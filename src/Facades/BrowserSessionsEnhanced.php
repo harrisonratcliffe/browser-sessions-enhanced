@@ -8,6 +8,6 @@ class BrowserSessionsEnhanced extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'browser-sessions';
+        return 'browser-sessions-enhanced';
     }
 }

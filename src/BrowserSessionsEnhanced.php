@@ -40,7 +40,7 @@ class BrowserSessionsEnhanced
         ];
 
         // Include session ID if configured
-        if (config('browser-sessions.include_session_id')) {
+        if (config('browser-sessions-enhanced.include_session_id')) {
             $sessionInfo['session_id'] = $session->id;
         }
 

@@ -3,7 +3,8 @@
     "description": "An enhanced version of the cjmellor/browser-sessions Laravel package to enable users to manage and monitor their active browser sessions. Allows users to view devices where they are logged in and provides options to terminate unrecognized or all sessions, enhancing account security",
     "keywords": [
         "laravel",
-        "browser-sessions"
+        "browser-sessions",
+        "browser-sessions-enhanced"
     ],
     "homepage": "https://github.com/harrisonratcliffe/browser-sessions-enhanced",
     "license": "MIT",
