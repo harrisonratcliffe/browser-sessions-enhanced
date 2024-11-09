@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "harrisonratcliffe\\BrowserSessionsEnhanced\\": "src/"
+            "Harrisonratcliffe\\BrowserSessionsEnhanced\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "harrisonratcliffe\\BrowserSessionsEnhanced\\Tests\\": "tests/"
+            "Harrisonratcliffe\\BrowserSessionsEnhanced\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -58,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "harrisonratcliffe\\BrowserSessionsEnhanced\\BrowserSessionsEnhancedServiceProvider"
+                "Harrisonratcliffe\\BrowserSessionsEnhanced\\BrowserSessionsEnhancedServiceProvider"
             ],
             "aliases": {
-                "BrowserSessions": "harrisonratcliffe\\BrowserSessionsEnhanced\\Facades\\BrowserSessionsEnhanced"
+                "BrowserSessions": "Harrisonratcliffe\\BrowserSessionsEnhanced\\Facades\\BrowserSessionsEnhanced"
             }
         },
         "minimum-stability": "stable",
