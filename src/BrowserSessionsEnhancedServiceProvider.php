@@ -4,7 +4,7 @@ namespace Harrisonratcliffe\BrowserSessionsEnhanced;
 
 use Illuminate\Support\ServiceProvider;
 
-class BrowserSessionsEnhancederviceProvider extends ServiceProvider
+class BrowserSessionsEnhancedServiceProvider extends ServiceProvider
 {
     public function boot()
     {
