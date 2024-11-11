@@ -24,24 +24,19 @@ You can install the package via Composer:
 composer require harrisonratcliffe/browser-sessions-enhanced
 ```
 
-##Publishing the Configuration
+## Publishing the Configuration
 
 To publish the configuration file for this package, run the following Artisan command:
 
 ```bash
 php artisan vendor:publish --provider="Harrisonratcliffe\BrowserSessionsEnhanced\BrowserSessionsEnhancedServiceProvider"
 ```
-This will copy the browser-sessions-enhanced.php configuration file to your application's config directory, allowing you to customize its settings.
+This will copy the `browser-sessions-enhanced.php` configuration file to your application's config directory, allowing you to customize its settings.
 
 ### Configurable Options
-You can customize the following options in the published config/browser-sessions-enhanced.php file:
+You can customize the following options in the published `config/browser-sessions-enhanced.php` file:
 
 `include_session_id: (default: false)`
-
-Set to true to include the session ID in the response when retrieving the current user's sessions.
-`include_ip_address: (default: false)`
-
-Set to true to include the IP address of the session in the response when retrieving the current user's sessions. This can be useful for security purposes.
 
 ## Usage
 
