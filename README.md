@@ -1,5 +1,9 @@
 > [!WARNING]
 >
+> This package has been archived in favour of my pull request being merged to the original forked package: [cjmellor/browser-sessions](https://github.com/cjmellor/browser-sessions)
+
+> [!WARNING]
+>
 > This package can only be used with the `database` driver for the Sessions. This is how it is done in Jetstream, so keep this in mind as it may turn you off knowing you need to manage sessions in the database.
 
 # Browser Sessions Enhanced
