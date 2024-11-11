@@ -6,7 +6,7 @@
 
 **Forked from [cjmellor/browser-sessions](https://github.com/cjmellor/browser-sessions)**
 
-*I modified this package so I can return the session ID for revoking specific/single sessions. Thought I'd publish it in case anyone else wanted to do the same.
+*I modified this package so I can return the session ID for revoking specific/single sessions. Thought I'd publish it in case anyone else wanted to do the same.*
 
 This package allows you to log out sessions that are active on other devices.
 
